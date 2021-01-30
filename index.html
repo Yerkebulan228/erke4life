@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Profile</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>SOAITU</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Главная" onclick="slowScroll('#main')">Главная</a>
+      <a href="#" title="Преимущества" onclick="slowScroll('#overview')">Мои хобби</a>
+      <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+      <a href="#" title="Ответы на вопросы" onclick="slowScroll('#faq')">Соц. сети</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Rustem Yerkebulan</h1>
+    <h3>Student of Astana IT University</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Experiences:</h2>
+
+      <span>- Member of Street music band "ArtMedia" and ex-member of volunteer group "U:Projects"</span>
+    <span class="title">ArtMedia</span><br>
+      <a href="https://www.instagram.com/_artmedia_/?hl=ru">
+         <img alt="Facebook" src="D:\Yerke\Guitar site\artmedia.png"
+         width="300" height="300"></a>
+    </div>
+    <div class="text">
+      <span></span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Мои хобби</h2>
+    <h4>В свободное свое время увлекаюсь спортом и живу музыкой!</h4>
+
+    <div class="img">
+      <img src="https://guitarlessons-com-public.s3.amazonaws.com/images/51bc0df-4-the-parts-of-the-guitar.jpg" alt="">
+      <span></span>
+    </div>
+    <div class="img">
+      <img src="D:\Yerke\Guitar site\tennis.png" alt="">
+      <span></span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Свяжись со мной!</h5></center>
+    <form id="form_input">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+			<input type="email" placeholder="Введите email" name="email" id="email"><br>
+			<label for="message">Сообщение <span>*</span></label><br>
+			<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Отправить</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Instagram</span><br>
+      <a href="https://www.instagram.com/erke4life/?hl=ru">
+         <img alt="Instagram" src="https://instagram-brand.com/wp-content/themes/ig-branding/assets/images/ig-logo-email.png"
+         width="250" height="240">
+      </a>
+    </div>
+    <div>
+      <span class="title">VK</span><br>
+      <a href="https://www.vk.com/lifeculture/">
+         <img alt="VK" src="https://cdn.iconscout.com/icon/free/png-256/vk-2690362-2232865.png"
+         width="250" height="250"></a>
+    </div>
+      <span class="title">Facebook</span><br>
+      <a href="https://www.facebook.com/profile.php?id=100009240845604">
+         <img alt="Facebook" src="https://www.freeiconspng.com/uploads/facebook-f-logo-transparent-image-4.png"
+         width="240" height="240"></a>
+    </div>
+  </div>
+
+  <script src="https://img.grouponcdn.com/iam/4sDLNT4aMfo663mawTnY/ox-2048x1242/v1/c700x420.jpg"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
